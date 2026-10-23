@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡易診断ゲーム</title>
+  <title>🍙？🍣？認知の癖診断ゲーム</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; background-color: #f0f8ff; padding: 20px; }
+    .box { background: white; max-width: 400px; margin: 50px auto; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    button { display: block; width: 100%; margin: 10px 0; padding: 15px; font-size: 16px; border: none; border-radius: 5px; background-color: #007bff; color: white; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    h2 { color: #333; }
+  </style>
+</head>
+<body>
+
+   <div class="box">
+    <!-- 質問や結果が表示されるエリア -->
+    <h2 id="question-text">Q1: これは何だと思いますか？（または、現時点で何に見えますか？）</h2>
+
+    <!-- 選択肢ボタンのエリア -->
+    <div id="buttons-area">
+      <button onclick="choose('おにぎり')">おにぎり</button>
+      <button onclick="choose('おすし')">おすし</button>
+    </div>
+  </div>
+
+  <script>
+    // ユーザーの回答を記憶する箱
+    let choice1 = ""; // Q1の答え（おにぎり or おすし）
+   
